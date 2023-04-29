@@ -1,4 +1,7 @@
 import video from "../data/video.js";
+import Details from "./Details.js";
+import Likes from "./Likes.js";
+import CommentsButton from "./CommentsButton.js";
 
 function App() {
   console.log("Here's your data:", video);
@@ -13,6 +16,9 @@ function App() {
         allowFullScreen
         title="Thinking in React"
       />
+      <Details video={video}/>
+      <Likes upvotes={video.upvotes} downvotes={video.downvotes}/>
+      <CommentsButton />
     </div>
   );
 }
